@@ -101,8 +101,34 @@ if (contactForm) {
       `Message: ${message}`
     ].join("\n");
 
-    window.location.href = `mailto:info@neemafiber.co.ke?subject=New%20Connection%20Request&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@neemainternetsolution.co.ke?subject=New%20Connection%20Request&body=${encodeURIComponent(body)}`;
   });
+}
+
+const animatedItems = document.querySelectorAll(
+  ".section, .stats, .package-card, .rate-card, .principle-card, .coverage-panel, .contact-form"
+);
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16 }
+  );
+
+  animatedItems.forEach((item, index) => {
+    item.classList.add("reveal");
+    item.style.setProperty("--reveal-delay", `${Math.min(index * 45, 360)}ms`);
+    revealObserver.observe(item);
+  });
+} else {
+  animatedItems.forEach((item) => item.classList.add("is-visible"));
 }
 
 if (coverageSelect && mapFrame && mapLink) {
