@@ -155,7 +155,8 @@ img {
 }
 
 .hero__media {
-  background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80");
+  background-image: url("assets/images/neema-family-hero.jpg");
+  background-position: center 38%;
 }
 
 .hero__overlay,
@@ -292,7 +293,7 @@ h3 {
   height: 360px;
   left: 0;
   top: 0;
-  background-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80");
+  background-image: url("assets/images/neema-home-tablet.jpg");
 }
 
 .image-card--small {
@@ -301,7 +302,7 @@ h3 {
   right: 0;
   bottom: 20px;
   border: 10px solid var(--white);
-  background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80");
+  background-image: url("assets/images/neema-youth-online.jpg");
 }
 
 .trust-badge {
@@ -368,7 +369,7 @@ blockquote {
 
 .principles__media {
   left: 38%;
-  background-image: linear-gradient(90deg, rgba(7, 82, 143, 0.92), rgba(7, 82, 143, 0.5)), url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1500&q=80");
+  background-image: linear-gradient(90deg, rgba(7, 82, 143, 0.92), rgba(7, 82, 143, 0.5)), url("assets/images/neema-community-mobile.jpg");
 }
 
 .principles__content {
@@ -393,7 +394,7 @@ blockquote {
   min-height: 230px;
   display: grid;
   place-items: center;
-  background-image: linear-gradient(rgba(5, 61, 109, 0.18), rgba(5, 61, 109, 0.18)), url("https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=850&q=80");
+  background-image: linear-gradient(rgba(5, 61, 109, 0.18), rgba(5, 61, 109, 0.18)), url("assets/images/neema-community-coverage.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -689,7 +690,8 @@ blockquote {
 }
 
 .cta__media {
-  background-image: url("https://images.unsplash.com/photo-1560617544-b4f287789e24?auto=format&fit=crop&w=1800&q=80");
+  background-image: url("assets/images/neema-home-tablet.jpg");
+  background-position: center 42%;
 }
 
 .cta__content {

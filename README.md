@@ -9,6 +9,7 @@ A classic static ISP website for Neema Fiber.
 - `index.html` - page content and structure
 - `styles.css` - layout, color, responsive design
 - `script.js` - mobile menu and contact form mail link
+- `assets/images/` - Neema website photos used across the page
 
 ## DigitalOcean Preview
 
@@ -21,7 +22,6 @@ DigitalOcean can detect the static site from the root `index.html`, or you can u
 Send the real business details and they can be added quickly:
 
 - Logo
-- Hero and section photos
 - Internet package speeds and prices
 - Phone, email, WhatsApp number, and social links
 - Office address
