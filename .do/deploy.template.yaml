@@ -1,0 +1,9 @@
+spec:
+  name: neema-fiber-preview
+  static_sites:
+    - name: neema-fiber
+      git:
+        branch: main
+        repo_clone_url: https://github.com/telenexus-admin/neema.git
+      source_dir: /
+      index_document: index.html
