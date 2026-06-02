@@ -487,8 +487,18 @@ blockquote {
 
 .package-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+}
+
+.pricing-title {
+  margin: 0 0 24px;
+  color: var(--blue-ink);
+  text-align: center;
+}
+
+.pricing-title--business {
+  margin-top: 58px;
 }
 
 .package-card {
@@ -525,7 +535,7 @@ blockquote {
 }
 
 .package-card ul {
-  min-height: 106px;
+  min-height: 116px;
   margin: 24px 0 30px;
   padding: 0;
   list-style: none;
@@ -543,6 +553,46 @@ blockquote {
   display: inline-block;
   margin-right: 10px;
   background: var(--orange);
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.rate-card {
+  padding: 28px;
+  color: var(--white);
+  background: var(--blue);
+  border-bottom: 4px solid var(--orange);
+  box-shadow: 0 14px 36px rgba(17, 50, 77, 0.12);
+}
+
+.rate-card span,
+.rate-card strong,
+.rate-card p {
+  display: block;
+}
+
+.rate-card span {
+  min-height: 44px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.rate-card strong {
+  margin: 14px 0 2px;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.rate-card p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .coverage {
@@ -590,6 +640,30 @@ blockquote {
 .coverage-panel__map span {
   padding: 15px 24px;
   border: 1px solid rgba(255, 255, 255, 0.35);
+  font-weight: 800;
+}
+
+.coverage-list {
+  max-height: 270px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 32px rgba(17, 50, 77, 0.08);
+}
+
+.coverage-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 12px;
+  color: var(--blue-ink);
+  background: var(--soft);
+  border-left: 3px solid var(--orange);
+  font-size: 12px;
   font-weight: 800;
 }
 
@@ -777,6 +851,7 @@ textarea {
   .split--reverse,
   .principles__grid,
   .package-grid,
+  .business-grid,
   .contact__grid,
   .footer__grid {
     grid-template-columns: 1fr;
