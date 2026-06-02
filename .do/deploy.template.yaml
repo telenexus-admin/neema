@@ -1,7 +1,7 @@
 spec:
-  name: neema-fiber-preview
+  name: nis-preview
   static_sites:
-    - name: neema-fiber
+    - name: nis-website
       git:
         branch: main
         repo_clone_url: https://github.com/telenexus-admin/neema.git

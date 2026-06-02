@@ -100,6 +100,15 @@ img {
   font-size: 18px;
 }
 
+.brand__logo {
+  width: 58px;
+  height: 48px;
+  object-fit: contain;
+  object-position: center;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  background: #1f74d4;
+}
+
 .brand__text {
   font-size: 25px;
 }
@@ -626,24 +635,6 @@ blockquote {
   gap: 18px;
 }
 
-.coverage-panel__map {
-  min-height: 360px;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  background:
-    linear-gradient(rgba(5, 61, 109, 0.78), rgba(5, 61, 109, 0.78)),
-    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 28px),
-    var(--blue);
-  box-shadow: var(--shadow);
-}
-
-.coverage-panel__map span {
-  padding: 15px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  font-weight: 800;
-}
-
 .coverage-list {
   max-height: 270px;
   overflow: auto;
@@ -665,6 +656,43 @@ blockquote {
   background: var(--soft);
   border-left: 3px solid var(--orange);
   font-size: 12px;
+  font-weight: 800;
+}
+
+.map-card {
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.map-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue-ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.map-card select {
+  margin-bottom: 14px;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 365px;
+  display: block;
+  border: 0;
+  background: var(--soft);
+}
+
+.map-card__link {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 14px;
+  color: var(--blue);
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -778,6 +806,10 @@ textarea {
 
 .brand--footer {
   margin-bottom: 18px;
+}
+
+.brand--footer .brand__logo {
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .footer p,

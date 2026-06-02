@@ -1,6 +1,6 @@
-# Neema Fiber Website
+# NIS Website
 
-A classic static ISP website for Neema Fiber.
+A classic static ISP website for Neema Internet Solution Limited.
 
 [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/telenexus-admin/neema/tree/main)
 
@@ -9,7 +9,7 @@ A classic static ISP website for Neema Fiber.
 - `index.html` - page content and structure
 - `styles.css` - layout, color, responsive design
 - `script.js` - mobile menu and contact form mail link
-- `assets/images/` - Neema website photos used across the page
+- `assets/images/` - NIS logo and website photos used across the page
 
 ## DigitalOcean Preview
 
