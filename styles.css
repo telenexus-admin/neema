@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
     radial-gradient(circle at 0 0, rgba(86, 48, 184, 0.09), transparent 34%),
     radial-gradient(circle at 100% 10%, rgba(18, 174, 232, 0.1), transparent 30%),
     var(--white);
+  overflow-x: hidden;
 }
 
 a {
@@ -47,6 +49,7 @@ img {
 .container {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
+  min-width: 0;
 }
 
 .top-bar {
@@ -64,6 +67,7 @@ img {
 
 .top-link {
   opacity: 0.92;
+  overflow-wrap: anywhere;
 }
 
 .socials {
@@ -291,6 +295,7 @@ h3 {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 72px;
+  min-width: 0;
 }
 
 .split--reverse {
@@ -350,6 +355,7 @@ h3 {
 
 .section-copy p {
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 blockquote {
@@ -527,6 +533,7 @@ blockquote {
   position: relative;
   overflow: hidden;
   padding: 34px;
+  min-width: 0;
   border: 1px solid rgba(20, 121, 212, 0.2);
   background:
     linear-gradient(var(--white), var(--white)) padding-box,
@@ -828,6 +835,7 @@ blockquote {
   margin-top: 26px;
   color: var(--blue);
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .contact-form {
@@ -854,6 +862,7 @@ blockquote {
 input,
 select,
 textarea {
+  min-width: 0;
   width: 100%;
   border: 1px solid #d9e1e8;
   padding: 14px 15px;
@@ -1044,20 +1053,104 @@ textarea {
 
 @media (max-width: 560px) {
   .container {
-    width: min(100% - 28px, 1120px);
+    width: min(100% - 24px, 1120px);
+  }
+
+  .top-bar__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 0;
+    font-size: 11px;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .nav__inner {
+    min-height: 68px;
+  }
+
+  .nav-links {
+    left: 12px;
+    right: 12px;
+    top: 68px;
+  }
+
+  .brand {
+    max-width: calc(100vw - 88px);
+    gap: 8px;
+  }
+
+  .brand__logo {
+    width: 48px;
+    height: 40px;
   }
 
   .brand__text {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   h1 {
-    font-size: 48px;
+    max-width: 100%;
+    font-size: 36px;
+    line-height: 1.06;
+    overflow-wrap: break-word;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .hero {
+    min-height: 590px;
+  }
+
+  .hero__content {
+    padding-top: 78px;
+  }
+
+  .hero__lead {
+    font-size: 16px;
   }
 
   .hero__actions,
   .button {
     width: 100%;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .split,
+  .contact__grid {
+    gap: 38px;
+  }
+
+  .package-card,
+  .rate-card,
+  .contact-form,
+  .map-card {
+    padding: 22px;
+  }
+
+  .price {
+    font-size: 29px;
+  }
+
+  .business-grid {
+    gap: 14px;
+  }
+
+  .map-card iframe {
+    height: 300px;
+  }
+
+  .coverage-list {
+    max-height: 230px;
+    padding: 14px;
   }
 
   .image-stack {
