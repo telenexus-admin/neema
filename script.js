@@ -101,7 +101,7 @@ if (contactForm) {
       `Message: ${message}`
     ].join("\n");
 
-    window.location.href = `mailto:info@neemainternetsolution.co.ke?subject=New%20Connection%20Request&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@neemainternet.co.ke?subject=New%20Connection%20Request&body=${encodeURIComponent(body)}`;
   });
 }
 

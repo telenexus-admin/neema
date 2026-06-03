@@ -112,8 +112,8 @@ img {
 }
 
 .brand__logo {
-  width: 58px;
-  height: 48px;
+  width: 86px;
+  height: 70px;
   object-fit: contain;
   object-position: center;
   border: 2px solid rgba(255, 255, 255, 0.75);
@@ -121,7 +121,7 @@ img {
 }
 
 .brand__text {
-  font-size: 25px;
+  font-size: 29px;
 }
 
 .nav-links {
@@ -424,19 +424,6 @@ blockquote {
   background-image: linear-gradient(rgba(5, 61, 109, 0.18), rgba(5, 61, 109, 0.18)), url("assets/images/neema-community-coverage.jpg");
   background-size: cover;
   background-position: center;
-}
-
-.play-button {
-  width: 76px;
-  height: 76px;
-  display: grid;
-  place-items: center;
-  color: var(--blue);
-  background: var(--white);
-  border-radius: 50%;
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
 }
 
 .principle-card {
@@ -1084,12 +1071,12 @@ textarea {
   }
 
   .brand__logo {
-    width: 48px;
-    height: 40px;
+    width: 64px;
+    height: 52px;
   }
 
   .brand__text {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   h1 {
