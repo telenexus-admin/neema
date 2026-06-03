@@ -254,10 +254,21 @@ p {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3,
+.pricing-title,
+.section-heading h2,
+.hero-stat strong,
+.stats strong,
+.price,
+.rate-card strong {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
 h1 {
   max-width: 760px;
   margin-bottom: 18px;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(54px, 7vw, 88px);
   line-height: 0.95;
   letter-spacing: -1px;
@@ -367,7 +378,6 @@ h3 {
 .hero-stat strong {
   display: block;
   margin-bottom: 0;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: 44px;
   line-height: 1;
 }
@@ -1115,7 +1125,6 @@ textarea {
 .brand--footer .brand__logo {
   width: 150px;
   height: 90px;
-  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .footer p,
