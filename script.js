@@ -106,7 +106,7 @@ if (contactForm) {
 }
 
 const animatedItems = document.querySelectorAll(
-  ".section, .why-card, .stats-row, .package-card, .rate-card, .coverage-grid, .process-grid article, .proof-grid, .contact-form"
+  ".section, .stats, .package-card, .rate-card, .principle-card, .coverage-panel, .contact-form"
 );
 
 if ("IntersectionObserver" in window) {

@@ -4,22 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NIS | Neema Internet Solution Limited</title>
-  <meta name="description" content="Neema Internet Solution Limited delivers reliable unlimited internet packages for homes and businesses.">
+  <meta name="description" content="Neema Internet Solution Limited delivers fast, reliable internet packages for homes, businesses, and offices.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header" id="top">
-    <div class="top-strip">
-      <div class="container top-strip__inner">
-        <a href="mailto:info@neemainternetsolution.co.ke">info@neemainternetsolution.co.ke</a>
-        <a href="tel:+254727841778">0727 841 778</a>
+    <div class="top-bar">
+      <div class="container top-bar__inner">
+        <a href="mailto:info@neemainternetsolution.co.ke" class="top-link">info@neemainternetsolution.co.ke</a>
+        <a href="tel:+254727841778" class="top-link">0727 841 778</a>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="X">x</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
       </div>
     </div>
+
     <nav class="nav">
       <div class="container nav__inner">
         <a class="brand" href="#top" aria-label="Neema Internet Solution Limited home">
-          <img src="assets/images/neema-logo.jpg" alt="Neema Internet Solution Limited logo">
-          <span>NIS</span>
+          <img class="brand__logo" src="assets/images/neema-logo.jpg" alt="Neema Internet Solution Limited logo">
+          <span class="brand__text">NIS</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
           <span></span>
@@ -27,47 +33,369 @@
           <span></span>
         </button>
         <div class="nav-links" data-nav-links>
-          <a href="#why">Why NIS</a>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
           <a href="#packages">Packages</a>
           <a href="#coverage">Coverage</a>
-          <a href="#process">Process</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cta" href="#contact">Get Connected</a>
+          <a class="quote-link" href="#contact">Get Connected</a>
         </div>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-label="Neema Internet Solution Limited introduction">
       <div class="hero__media"></div>
-      <div class="hero__shade"></div>
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow">Together We Connect The World</p>
-          <h1>Reliable Internet Starts Here</h1>
-          <p>Unlimited home and business internet packages across Kayole, Umoja, Dandora, Kariobangi, Ruai, and nearby estates.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#packages">View Packages</a>
-            <a class="btn btn--ghost" href="#coverage">Check Coverage</a>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="eyebrow">Fast Internet For Homes And Businesses</p>
+        <h1>Neema Internet Solution Limited</h1>
+        <p class="hero__lead">Reliable connectivity, clean installations, and support that stays close to the customer.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#packages">View Packages</a>
+          <a class="button button--light" href="#contact">Request Installation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section" id="about">
+      <div class="container split">
+        <div class="image-stack" aria-label="NIS installation and support">
+          <div class="image-card image-card--large"></div>
+          <div class="image-card image-card--small"></div>
+          <div class="trust-badge">
+            <strong>24/7</strong>
+            <span>Network Monitoring</span>
           </div>
         </div>
-        <form class="quote-card contact-form" id="contact">
-          <p class="quote-card__title">Request Connection</p>
+        <div class="section-copy">
+          <p class="eyebrow eyebrow--dark">About Us</p>
+          <h2>Internet Built For Everyday Work, Study, Streaming, And Growth</h2>
+          <p>Neema Internet Solution Limited provides dependable broadband connections for residential customers, offices, shops, institutions, and growing businesses.</p>
+          <blockquote>Stable speed, responsive support, and a smooth connection experience from signup to installation.</blockquote>
+          <div class="mini-feature">
+            <span class="mini-feature__icon">+</span>
+            <div>
+              <strong>Professional setup</strong>
+              <p>Site survey, cable routing, router configuration, and post-install support handled with care.</p>
+            </div>
+          </div>
+          <a class="button button--primary" href="#contact">Talk To Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles section section--blue">
+      <div class="principles__media"></div>
+      <div class="container principles__content">
+        <p class="eyebrow">Our Mission And Promise</p>
+        <h2>Connectivity That Keeps Families, Teams, And Businesses Moving</h2>
+        <div class="principles__grid">
+          <div class="video-tile" aria-label="Network technicians at work">
+            <span class="play-button">Play</span>
+          </div>
+          <article class="principle-card">
+            <span class="card-icon">01</span>
+            <h3>Our Vision</h3>
+            <p>To make high quality internet access simple, affordable, and reliable for every connected customer.</p>
+          </article>
+          <article class="principle-card">
+            <span class="card-icon">02</span>
+            <h3>Our Mission</h3>
+            <p>To deliver consistent speeds, fair packages, and fast support across the communities we serve.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats__inner">
+        <div>
+          <strong>99%</strong>
+          <span>Uptime Target</span>
+        </div>
+        <div>
+          <strong>24/7</strong>
+          <span>Support Desk</span>
+        </div>
+        <div>
+          <strong>48hr</strong>
+          <span>Install Window</span>
+        </div>
+        <div>
+          <strong>100+</strong>
+          <span>Homes Connected</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages" id="packages">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow--dark">Internet Packages</p>
+          <h2>Choose A Plan That Fits How You Connect</h2>
+          <p>All home packages are unlimited, with simple monthly pricing and clear installation fees.</p>
+        </div>
+        <h3 class="pricing-title">Home Plans</h3>
+        <div class="package-grid">
+          <article class="package-card">
+            <p class="package-card__label">Starter</p>
+            <h3>7 Mbps</h3>
+            <div class="speed-bar"><span style="--speed: 18%"></span></div>
+            <p class="price">KSh 1,000<span>/month</span></p>
+            <ul>
+              <li>Unlimited usage</li>
+              <li>KSh 1,000 installation</li>
+              <li>Ideal for browsing and study</li>
+            </ul>
+            <a class="button button--outline" href="#contact">Select Plan</a>
+          </article>
+          <article class="package-card">
+            <p class="package-card__label">Home Basic</p>
+            <h3>10 Mbps</h3>
+            <div class="speed-bar"><span style="--speed: 25%"></span></div>
+            <p class="price">KSh 1,500<span>/month</span></p>
+            <ul>
+              <li>Unlimited usage</li>
+              <li>KSh 1,000 installation</li>
+              <li>Good for light streaming</li>
+            </ul>
+            <a class="button button--outline" href="#contact">Select Plan</a>
+          </article>
+          <article class="package-card">
+            <p class="package-card__label">Family</p>
+            <h3>15 Mbps</h3>
+            <div class="speed-bar"><span style="--speed: 38%"></span></div>
+            <p class="price">KSh 1,800<span>/month</span></p>
+            <ul>
+              <li>Unlimited usage</li>
+              <li>KSh 1,500 installation</li>
+              <li>For multiple devices</li>
+            </ul>
+            <a class="button button--outline" href="#contact">Select Plan</a>
+          </article>
+          <article class="package-card package-card--featured">
+            <p class="package-card__label">Popular</p>
+            <h3>20 Mbps</h3>
+            <div class="speed-bar"><span style="--speed: 50%"></span></div>
+            <p class="price">KSh 2,000<span>/month</span></p>
+            <ul>
+              <li>Unlimited usage</li>
+              <li>Free installation</li>
+              <li>Streaming and online work</li>
+            </ul>
+            <a class="button button--primary" href="#contact">Select Plan</a>
+          </article>
+          <article class="package-card">
+            <p class="package-card__label">Plus</p>
+            <h3>25 Mbps</h3>
+            <div class="speed-bar"><span style="--speed: 63%"></span></div>
+            <p class="price">KSh 2,500<span>/month</span></p>
+            <ul>
+              <li>Unlimited usage</li>
+              <li>Free installation</li>
+              <li>Reliable home entertainment</li>
+            </ul>
+            <a class="button button--outline" href="#contact">Select Plan</a>
+          </article>
+          <article class="package-card">
+            <p class="package-card__label">Power</p>
+            <h3>30 Mbps</h3>
+            <div class="speed-bar"><span style="--speed: 75%"></span></div>
+            <p class="price">KSh 3,000<span>/month</span></p>
+            <ul>
+              <li>Unlimited usage</li>
+              <li>Free installation</li>
+              <li>For heavy home usage</li>
+            </ul>
+            <a class="button button--outline" href="#contact">Select Plan</a>
+          </article>
+          <article class="package-card">
+            <p class="package-card__label">Premium</p>
+            <h3>40 Mbps</h3>
+            <div class="speed-bar"><span style="--speed: 100%"></span></div>
+            <p class="price">KSh 4,000<span>/month</span></p>
+            <ul>
+              <li>Unlimited usage</li>
+              <li>Free installation</li>
+              <li>Best for busy households</li>
+            </ul>
+            <a class="button button--outline" href="#contact">Select Plan</a>
+          </article>
+        </div>
+
+        <h3 class="pricing-title pricing-title--business">Business Plans</h3>
+        <div class="business-grid">
+          <article class="rate-card">
+            <span>50 Mbps - 100 Mbps</span>
+            <strong>KSh 120</strong>
+            <p>per Mbps</p>
+          </article>
+          <article class="rate-card">
+            <span>101 Mbps - 250 Mbps</span>
+            <strong>KSh 110</strong>
+            <p>per Mbps</p>
+          </article>
+          <article class="rate-card">
+            <span>260 Mbps - 500 Mbps</span>
+            <strong>KSh 100</strong>
+            <p>per Mbps</p>
+          </article>
+          <article class="rate-card">
+            <span>510 Mbps - 1 Gbps</span>
+            <strong>KSh 90</strong>
+            <p>per Mbps</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section coverage" id="coverage">
+      <div class="container split split--reverse">
+        <div class="section-copy">
+          <p class="eyebrow eyebrow--dark">Coverage And Office</p>
+          <h2>Local Service, Clear Communication, And Quick Response</h2>
+          <p>NIS serves homes and businesses across the eastern Nairobi coverage corridor, with quick availability checks before installation.</p>
+          <div class="office-list">
+            <div>
+              <strong>Office Address</strong>
+              <span>Contact NIS for office directions</span>
+            </div>
+            <div>
+              <strong>Working Hours</strong>
+              <span>Monday - Saturday, 8:00 AM - 6:00 PM</span>
+            </div>
+            <div>
+              <strong>Service Areas</strong>
+              <span>Kayole, Umoja, Dandora, Kariobangi, Ruai, and nearby estates</span>
+            </div>
+          </div>
+        </div>
+        <div class="coverage-panel">
+          <div class="map-card">
+            <label for="coverage-select">Select your location</label>
+            <select id="coverage-select" data-coverage-select>
+              <option value="Kayole, Nairobi, Kenya">Kayole</option>
+            </select>
+            <iframe
+              data-map-frame
+              title="NIS coverage map"
+              src="https://www.google.com/maps?q=Kayole%2C%20Nairobi%2C%20Kenya&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+            <a class="map-card__link" data-map-link href="https://www.google.com/maps/search/?api=1&query=Kayole%2C%20Nairobi%2C%20Kenya" target="_blank" rel="noopener">Open selected location in Google Maps</a>
+          </div>
+          <div class="coverage-list" aria-label="Covered locations">
+            <span>Kayole</span>
+            <span>Kayole Corner</span>
+            <span>Kayole Poster</span>
+            <span>Kayole 1</span>
+            <span>Patanisho</span>
+            <span>Soweto</span>
+            <span>Stage 17</span>
+            <span>Muthisha</span>
+            <span>Jacaranda</span>
+            <span>Nasra</span>
+            <span>Sosion</span>
+            <span>Masimba</span>
+            <span>Nyama Villa</span>
+            <span>Kwa DO</span>
+            <span>Kayole Naivas</span>
+            <span>Kangundo Road</span>
+            <span>Umoja Kwa Chief</span>
+            <span>Umoja Kwa Maji</span>
+            <span>First Love Church</span>
+            <span>Sabasaba</span>
+            <span>Rasta</span>
+            <span>Kioi</span>
+            <span>Stage 20</span>
+            <span>Mugendi</span>
+            <span>Kayole Hospital</span>
+            <span>Tushauriane</span>
+            <span>Matopeni</span>
+            <span>Komarock F1</span>
+            <span>Komarock F2</span>
+            <span>Komarock F3</span>
+            <span>K-Mall</span>
+            <span>Shujaa Mall</span>
+            <span>Donholm</span>
+            <span>Umoja 1</span>
+            <span>Umoja 2</span>
+            <span>Umoja 3</span>
+            <span>Dandora Total</span>
+            <span>Dandora F1</span>
+            <span>Dandora F2</span>
+            <span>Dandora F3</span>
+            <span>Dandora F4</span>
+            <span>Dandora Cinema</span>
+            <span>Kwa Mbao</span>
+            <span>Kiamaiko</span>
+            <span>Dandora Greeni</span>
+            <span>Dandora BP</span>
+            <span>Dandora Equity</span>
+            <span>COCH</span>
+            <span>Kariobangi South</span>
+            <span>Kariobangi North</span>
+            <span>Ruai Town</span>
+            <span>Ruai Primary</span>
+            <span>Ruai Quickmart</span>
+            <span>Ruai Bypass</span>
+            <span>Ruai Junction</span>
+            <span>Ruai Family</span>
+            <span>Ruai Shelter Villa</span>
+            <span>Ruai Dune</span>
+            <span>Ruai Wel Kim</span>
+            <span>Ruai Seventh Sunday</span>
+            <span>Ruai Red Gate</span>
+            <span>Ruai Mimamu</span>
+          </div>
+          <div class="coverage-panel__note">
+            <strong>Need a site survey?</strong>
+            <p>Send your estate, road, building name, or pin location and the team will confirm availability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta__media"></div>
+      <div class="cta__overlay"></div>
+      <div class="container cta__content">
+        <h2>Let Us Connect Your Home Or Business Today</h2>
+        <p>Fast signup, neat installation, and packages that can grow with your needs.</p>
+        <a class="button button--primary" href="#contact">Get A Quote</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="section-copy">
+          <p class="eyebrow eyebrow--dark">Contact Us</p>
+          <h2>Request Installation Or Ask About Coverage</h2>
+          <p>Share your details and the team will help confirm coverage, recommend the right package, and arrange installation.</p>
+          <div class="contact-lines">
+            <a href="tel:+254727841778">0727 841 778</a>
+            <a href="mailto:info@neemainternetsolution.co.ke">info@neemainternetsolution.co.ke</a>
+          </div>
+        </div>
+        <form class="contact-form">
           <label>
-            Name
+            Full Name
             <input type="text" name="name" placeholder="Your name" required>
           </label>
           <label>
-            Phone
-            <input type="tel" name="phone" placeholder="0727..." required>
+            Phone Number
+            <input type="tel" name="phone" placeholder="+254..." required>
           </label>
           <label>
             Location
-            <input type="text" name="location" placeholder="Estate or road">
+            <input type="text" name="location" placeholder="Estate, road, or building">
           </label>
           <label>
-            Package
+            Package Interest
             <select name="package">
               <option>7 Mbps - KSh 1,000/month</option>
               <option>10 Mbps - KSh 1,500/month</option>
@@ -82,212 +410,10 @@
           </label>
           <label class="full">
             Message
-            <textarea name="message" rows="3" placeholder="Tell us what you need"></textarea>
+            <textarea name="message" rows="4" placeholder="Tell us what you need"></textarea>
           </label>
-          <button class="btn btn--primary" type="submit">Send Request</button>
+          <button class="button button--primary" type="submit">Send Request</button>
         </form>
-      </div>
-      <div class="hero-wave" aria-hidden="true"></div>
-    </section>
-
-    <section class="section why" id="why">
-      <div class="container">
-        <div class="section-head section-head--left">
-          <p class="eyebrow">Why Will You Choose Our Services?</p>
-          <h2>Stable internet, simple packages, local support.</h2>
-        </div>
-        <div class="why-grid">
-          <article class="why-card why-card--image">
-            <img src="assets/images/neema-home-tablet.jpg" alt="Home internet customer using a tablet">
-            <div>
-              <h3>Unlimited Home Internet</h3>
-              <p>Plans built for browsing, streaming, study, and daily family use.</p>
-            </div>
-          </article>
-          <article class="why-card why-card--featured">
-            <img src="assets/images/neema-family-hero.jpg" alt="Family connected online">
-            <div>
-              <h3>Fast Installation</h3>
-              <p>Coverage check, package selection, router setup, and activation handled clearly.</p>
-            </div>
-          </article>
-          <article class="why-card why-card--image">
-            <img src="assets/images/neema-community-mobile.jpg" alt="Community members using mobile internet">
-            <div>
-              <h3>Local Coverage</h3>
-              <p>Serving key estates across eastern Nairobi with quick location confirmation.</p>
-            </div>
-          </article>
-        </div>
-        <div class="stats-row">
-          <div><strong>24/7</strong><span>Network Monitoring</span></div>
-          <div><strong>99%</strong><span>Uptime Target</span></div>
-          <div><strong>48hr</strong><span>Install Window</span></div>
-          <div><strong>60+</strong><span>Covered Locations</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dark-band" id="packages">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Our Company Provides</p>
-          <h2>The Best Internet Packages.</h2>
-        </div>
-        <div class="package-grid">
-          <article class="package-card">
-            <span>Starter</span>
-            <h3>7 Mbps</h3>
-            <div class="speed-bar"><i style="--speed: 18%"></i></div>
-            <p>KSh 1,000<small>/month</small></p>
-            <ul>
-              <li>Unlimited usage</li>
-              <li>KSh 1,000 installation</li>
-            </ul>
-          </article>
-          <article class="package-card">
-            <span>Home Basic</span>
-            <h3>10 Mbps</h3>
-            <div class="speed-bar"><i style="--speed: 25%"></i></div>
-            <p>KSh 1,500<small>/month</small></p>
-            <ul>
-              <li>Unlimited usage</li>
-              <li>KSh 1,000 installation</li>
-            </ul>
-          </article>
-          <article class="package-card">
-            <span>Family</span>
-            <h3>15 Mbps</h3>
-            <div class="speed-bar"><i style="--speed: 38%"></i></div>
-            <p>KSh 1,800<small>/month</small></p>
-            <ul>
-              <li>Unlimited usage</li>
-              <li>KSh 1,500 installation</li>
-            </ul>
-          </article>
-          <article class="package-card package-card--hot">
-            <span>Popular</span>
-            <h3>20 Mbps</h3>
-            <div class="speed-bar"><i style="--speed: 50%"></i></div>
-            <p>KSh 2,000<small>/month</small></p>
-            <ul>
-              <li>Unlimited usage</li>
-              <li>Free installation</li>
-            </ul>
-          </article>
-          <article class="package-card">
-            <span>Plus</span>
-            <h3>25 Mbps</h3>
-            <div class="speed-bar"><i style="--speed: 63%"></i></div>
-            <p>KSh 2,500<small>/month</small></p>
-            <ul>
-              <li>Unlimited usage</li>
-              <li>Free installation</li>
-            </ul>
-          </article>
-          <article class="package-card">
-            <span>Power</span>
-            <h3>30 Mbps</h3>
-            <div class="speed-bar"><i style="--speed: 75%"></i></div>
-            <p>KSh 3,000<small>/month</small></p>
-            <ul>
-              <li>Unlimited usage</li>
-              <li>Free installation</li>
-            </ul>
-          </article>
-          <article class="package-card">
-            <span>Premium</span>
-            <h3>40 Mbps</h3>
-            <div class="speed-bar"><i style="--speed: 100%"></i></div>
-            <p>KSh 4,000<small>/month</small></p>
-            <ul>
-              <li>Unlimited usage</li>
-              <li>Free installation</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section split-section">
-      <div class="container split-grid">
-        <div class="image-panel">
-          <img src="assets/images/neema-youth-online.jpg" alt="Customers using mobile internet">
-          <div class="image-badge">
-            <strong>NIS</strong>
-            <span>Connected communities</span>
-          </div>
-        </div>
-        <div class="content-panel">
-          <p class="eyebrow">Business Internet</p>
-          <h2>Scalable bandwidth for offices, shops, and institutions.</h2>
-          <div class="rate-grid">
-            <article class="rate-card"><span>50 - 100 Mbps</span><strong>KSh 120</strong><small>per Mbps</small></article>
-            <article class="rate-card"><span>101 - 250 Mbps</span><strong>KSh 110</strong><small>per Mbps</small></article>
-            <article class="rate-card"><span>260 - 500 Mbps</span><strong>KSh 100</strong><small>per Mbps</small></article>
-            <article class="rate-card"><span>510 Mbps - 1 Gbps</span><strong>KSh 90</strong><small>per Mbps</small></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section coverage" id="coverage">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">You Can Check Coverage Quickly.</p>
-          <h2>Select your location and confirm it on Google Maps.</h2>
-        </div>
-        <div class="coverage-grid">
-          <div class="map-card">
-            <label for="coverage-select">Select your location</label>
-            <select id="coverage-select" data-coverage-select>
-              <option value="Kayole, Nairobi, Kenya">Kayole</option>
-            </select>
-            <iframe
-              data-map-frame
-              title="NIS coverage map"
-              src="https://www.google.com/maps?q=Kayole%2C%20Nairobi%2C%20Kenya&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
-            <a data-map-link href="https://www.google.com/maps/search/?api=1&query=Kayole%2C%20Nairobi%2C%20Kenya" target="_blank" rel="noopener">Open selected location in Google Maps</a>
-          </div>
-          <div class="coverage-list" aria-label="Covered locations">
-            <span>Kayole</span><span>Kayole Corner</span><span>Kayole Poster</span><span>Kayole 1</span><span>Patanisho</span><span>Soweto</span><span>Stage 17</span><span>Muthisha</span><span>Jacaranda</span><span>Nasra</span><span>Sosion</span><span>Masimba</span><span>Nyama Villa</span><span>Kwa DO</span><span>Kayole Naivas</span><span>Kangundo Road</span><span>Umoja Kwa Chief</span><span>Umoja Kwa Maji</span><span>First Love Church</span><span>Sabasaba</span><span>Rasta</span><span>Kioi</span><span>Stage 20</span><span>Mugendi</span><span>Kayole Hospital</span><span>Tushauriane</span><span>Matopeni</span><span>Komarock F1</span><span>Komarock F2</span><span>Komarock F3</span><span>K-Mall</span><span>Shujaa Mall</span><span>Donholm</span><span>Umoja 1</span><span>Umoja 2</span><span>Umoja 3</span><span>Dandora Total</span><span>Dandora F1</span><span>Dandora F2</span><span>Dandora F3</span><span>Dandora F4</span><span>Dandora Cinema</span><span>Kwa Mbao</span><span>Kiamaiko</span><span>Dandora Greeni</span><span>Dandora BP</span><span>Dandora Equity</span><span>COCH</span><span>Kariobangi South</span><span>Kariobangi North</span><span>Ruai Town</span><span>Ruai Primary</span><span>Ruai Quickmart</span><span>Ruai Bypass</span><span>Ruai Junction</span><span>Ruai Family</span><span>Ruai Shelter Villa</span><span>Ruai Dune</span><span>Ruai Wel Kim</span><span>Ruai Seventh Sunday</span><span>Ruai Red Gate</span><span>Ruai Mimamu</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="process" id="process">
-      <div class="process__media"></div>
-      <div class="process__shade"></div>
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Get Connected In Four Steps</p>
-          <h2>From coverage check to live connection.</h2>
-        </div>
-        <div class="process-grid">
-          <article><span>01</span><h3>Check Area</h3><p>Select your location or call NIS to confirm coverage.</p></article>
-          <article><span>02</span><h3>Choose Plan</h3><p>Pick a home package or business bandwidth range.</p></article>
-          <article><span>03</span><h3>Install Router</h3><p>Our team handles setup, cable routing, and activation.</p></article>
-          <article><span>04</span><h3>Stay Online</h3><p>Enjoy unlimited internet with local support.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section proof">
-      <div class="container proof-grid">
-        <div>
-          <p class="eyebrow">Hear What Our Clients Say</p>
-          <h2>Internet service focused on daily reliability.</h2>
-          <blockquote>
-            NIS helps customers stay connected for work, school, entertainment, and business operations with clear packages and local response.
-          </blockquote>
-          <a class="btn btn--primary" href="#contact">Request Installation</a>
-        </div>
-        <img src="assets/images/neema-community-coverage.jpg" alt="Customers using internet in the community">
       </div>
     </section>
   </main>
@@ -296,28 +422,34 @@
     <div class="container footer__grid">
       <div>
         <a class="brand brand--footer" href="#top" aria-label="Neema Internet Solution Limited home">
-          <img src="assets/images/neema-logo.jpg" alt="Neema Internet Solution Limited logo">
-          <span>NIS</span>
+          <img class="brand__logo" src="assets/images/neema-logo.jpg" alt="Neema Internet Solution Limited logo">
+          <span class="brand__text">NIS</span>
         </a>
         <p>Neema Internet Solution Limited. Together we connect the world.</p>
       </div>
       <div>
         <h3>Quick Links</h3>
-        <a href="#why">Why NIS</a>
+        <a href="#about">About Us</a>
         <a href="#packages">Packages</a>
         <a href="#coverage">Coverage</a>
-        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
       </div>
       <div>
-        <h3>Contact</h3>
-        <a href="tel:+254727841778">0727 841 778</a>
-        <a href="mailto:info@neemainternetsolution.co.ke">info@neemainternetsolution.co.ke</a>
-        <p>Contact NIS for office directions.</p>
+        <h3>Services</h3>
+        <a href="#packages">Home Internet</a>
+        <a href="#packages">Business Internet</a>
+        <a href="#coverage">Site Survey</a>
+        <a href="#contact">Router Setup</a>
+      </div>
+      <div>
+        <h3>Office</h3>
+        <p>Contact NIS for office directions</p>
+        <p>Monday - Saturday<br>8:00 AM - 6:00 PM</p>
       </div>
     </div>
     <div class="container footer__bottom">
       <span>All Rights Reserved - Neema Internet Solution Limited</span>
-      <span>Reliable internet for connected communities</span>
+      <span>Designed for reliable connections</span>
     </div>
   </footer>
 
