@@ -217,7 +217,7 @@ if (siteChatForm && siteChatInput) {
       addSiteChatMessage(data.reply || "I am here. How can I help?", "agent");
     } catch (error) {
       if (typing) typing.remove();
-      addSiteChatMessage(error.message || "Support is unavailable right now. Please try WhatsApp or call us.", "error");
+      addSiteChatMessage("I could not connect to live AI support right now. Please try again, WhatsApp us, or call 0727 841 778.", "error");
     } finally {
       siteChatInput.disabled = false;
       if (submitButton) submitButton.disabled = false;
