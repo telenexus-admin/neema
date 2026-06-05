@@ -212,12 +212,12 @@ if (siteChatForm && siteChatInput) {
         })
       });
       const data = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(data.error || "Support is unavailable right now.");
+      if (!response.ok) throw new Error(data.error ? `${response.status}: ${data.error}` : `${response.status}: Support is unavailable right now.`);
       if (typing) typing.remove();
       addSiteChatMessage(data.reply || "I am here. How can I help?", "agent");
     } catch (error) {
       if (typing) typing.remove();
-      addSiteChatMessage("I could not connect to live AI support right now. Please try again, WhatsApp us, or call 0727 841 778.", "error");
+      addSiteChatMessage(`I could not connect to live AI support right now (${error.message || "network error"}). Please try again, WhatsApp us, or call 0727 841 778.`, "error");
     } finally {
       siteChatInput.disabled = false;
       if (submitButton) submitButton.disabled = false;
