@@ -187,6 +187,13 @@ if (siteChat && siteChatOpen && siteChatClose) {
   siteChatClose.addEventListener("click", () => {
     siteChat.hidden = true;
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !siteChat.hidden) {
+      siteChat.hidden = true;
+      siteChatOpen.focus();
+    }
+  });
 }
 
 if (siteChatForm && siteChatInput) {
