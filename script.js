@@ -4,11 +4,6 @@ const contactForm = document.querySelector(".contact-form");
 const coverageSelect = document.querySelector("[data-coverage-select]");
 const mapFrame = document.querySelector("[data-map-frame]");
 const mapLink = document.querySelector("[data-map-link]");
-const communitySlider = document.querySelector("[data-community-slider]");
-const communityTrack = document.querySelector("[data-community-track]");
-const communityPrev = document.querySelector("[data-community-prev]");
-const communityNext = document.querySelector("[data-community-next]");
-const communityDots = document.querySelectorAll("[data-community-dot]");
 
 const coverageLocations = [
   "Kayole",
@@ -154,43 +149,4 @@ if (coverageSelect && mapFrame && mapLink) {
 
   coverageSelect.addEventListener("change", updateMap);
   updateMap();
-}
-
-if (communitySlider && communityTrack && communityPrev && communityNext && communityDots.length) {
-  let communityIndex = 0;
-  let communityTimer;
-
-  const showCommunitySlide = (nextIndex) => {
-    communityIndex = (nextIndex + communityDots.length) % communityDots.length;
-    communityTrack.style.transform = `translateX(-${communityIndex * 100}%)`;
-    communityDots.forEach((dot, index) => {
-      dot.classList.toggle("is-active", index === communityIndex);
-    });
-  };
-
-  const startCommunityTimer = () => {
-    window.clearInterval(communityTimer);
-    communityTimer = window.setInterval(() => showCommunitySlide(communityIndex + 1), 6000);
-  };
-
-  communityPrev.addEventListener("click", () => {
-    showCommunitySlide(communityIndex - 1);
-    startCommunityTimer();
-  });
-
-  communityNext.addEventListener("click", () => {
-    showCommunitySlide(communityIndex + 1);
-    startCommunityTimer();
-  });
-
-  communityDots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      showCommunitySlide(Number(dot.dataset.communityDot));
-      startCommunityTimer();
-    });
-  });
-
-  communitySlider.addEventListener("mouseenter", () => window.clearInterval(communityTimer));
-  communitySlider.addEventListener("mouseleave", startCommunityTimer);
-  startCommunityTimer();
 }
