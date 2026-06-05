@@ -1338,6 +1338,50 @@ textarea {
   font-size: 12px;
 }
 
+.floating-contact {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 50;
+  display: grid;
+  gap: 12px;
+}
+
+.floating-contact__button {
+  min-width: 148px;
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 16px;
+  color: var(--white);
+  border-radius: 999px;
+  box-shadow: 0 16px 38px rgba(18, 35, 76, 0.24);
+  font-size: 13px;
+  font-weight: 900;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.floating-contact__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 46px rgba(18, 35, 76, 0.3);
+}
+
+.floating-contact__button svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.floating-contact__button--phone {
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+}
+
+.floating-contact__button--whatsapp {
+  background: #25d366;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -1694,5 +1738,24 @@ textarea {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .floating-contact {
+    right: 12px;
+    bottom: 12px;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .floating-contact__button {
+    min-width: 0;
+    min-height: 46px;
+    padding: 11px 13px;
+    font-size: 12px;
+  }
+
+  .floating-contact__button svg {
+    width: 19px;
+    height: 19px;
   }
 }
