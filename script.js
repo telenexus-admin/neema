@@ -4,6 +4,13 @@ const contactForm = document.querySelector(".contact-form");
 const coverageSelect = document.querySelector("[data-coverage-select]");
 const mapFrame = document.querySelector("[data-map-frame]");
 const mapLink = document.querySelector("[data-map-link]");
+const siteChat = document.querySelector("[data-site-chat]");
+const siteChatOpen = document.querySelector("[data-site-chat-open]");
+const siteChatClose = document.querySelector("[data-site-chat-close]");
+const siteChatForm = document.querySelector("[data-site-chat-form]");
+const siteChatInput = document.querySelector("[data-site-chat-input]");
+const siteChatMessages = document.querySelector("[data-site-chat-messages]");
+const siteChatApi = "https://nexa.telenexustechnologies.com/api/public/site-chat/4/message";
 
 const coverageLocations = [
   "Kayole",
@@ -149,4 +156,72 @@ if (coverageSelect && mapFrame && mapLink) {
 
   coverageSelect.addEventListener("change", updateMap);
   updateMap();
+}
+
+function siteChatSessionId() {
+  const key = "neemaSiteChatSession";
+  let session = localStorage.getItem(key);
+  if (!session) {
+    session = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+    localStorage.setItem(key, session);
+  }
+  return session;
+}
+
+function addSiteChatMessage(text, type = "agent") {
+  if (!siteChatMessages) return null;
+  const bubble = document.createElement("div");
+  bubble.className = `site-chat__message site-chat__message--${type}`;
+  bubble.textContent = text;
+  siteChatMessages.append(bubble);
+  siteChatMessages.scrollTop = siteChatMessages.scrollHeight;
+  return bubble;
+}
+
+if (siteChat && siteChatOpen && siteChatClose) {
+  siteChatOpen.addEventListener("click", () => {
+    siteChat.hidden = false;
+    siteChatInput?.focus();
+  });
+
+  siteChatClose.addEventListener("click", () => {
+    siteChat.hidden = true;
+  });
+}
+
+if (siteChatForm && siteChatInput) {
+  siteChatForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const message = siteChatInput.value.trim();
+    if (!message) return;
+    addSiteChatMessage(message, "user");
+    siteChatInput.value = "";
+    siteChatInput.disabled = true;
+    const submitButton = siteChatForm.querySelector("button");
+    if (submitButton) submitButton.disabled = true;
+    const typing = addSiteChatMessage("Typing...", "agent");
+
+    try {
+      const response = await fetch(siteChatApi, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          session_id: siteChatSessionId(),
+          message,
+          name: "Neema website visitor"
+        })
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || "Support is unavailable right now.");
+      if (typing) typing.remove();
+      addSiteChatMessage(data.reply || "I am here. How can I help?", "agent");
+    } catch (error) {
+      if (typing) typing.remove();
+      addSiteChatMessage(error.message || "Support is unavailable right now. Please try WhatsApp or call us.", "error");
+    } finally {
+      siteChatInput.disabled = false;
+      if (submitButton) submitButton.disabled = false;
+      siteChatInput.focus();
+    }
+  });
 }
