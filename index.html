@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260825-video2">
+  <link rel="stylesheet" href="styles.css?v=20260828-coverage-business">
 </head>
 <body>
   <header class="site-header">
@@ -152,34 +152,95 @@
             <div class="eyebrow">Packages</div>
             <h2>Choose a plan that fits your life.</h2>
           </div>
-          <p>Clear monthly pricing with simple options for homes and small businesses.</p>
+          <p>Clear monthly pricing with simple options for homes, businesses, students and communities.</p>
         </div>
-        <div class="packages-grid">
-          <article class="price-card">
-            <h3>7 Mbps</h3>
-            <strong>KSh 1,000 <span>/ month</span></strong>
-            <p>Good for browsing and lighter daily use.</p>
-          </article>
-          <article class="price-card">
-            <h3>10 Mbps</h3>
-            <strong>KSh 1,500 <span>/ month</span></strong>
-            <p>A balanced package for everyday homes.</p>
-          </article>
-          <article class="price-card price-card--featured">
-            <div class="popular-tag">Most popular</div>
-            <h3>20 Mbps</h3>
-            <strong>KSh 2,000 <span>/ month</span></strong>
-            <p>Great for busy families and streaming.</p>
-          </article>
-          <article class="price-card">
-            <h3>40 Mbps</h3>
-            <strong>KSh 4,000 <span>/ month</span></strong>
-            <p>For heavier home and work demand.</p>
-          </article>
-          <article class="price-card"><h3>50 Mbps</h3><strong>KSh 5,000 <span>/ month</span></strong><p>Fast connectivity for larger households.</p></article>
-          <article class="price-card"><h3>75 Mbps</h3><strong>KSh 6,500 <span>/ month</span></strong><p>Built for work, streaming, and smart homes.</p></article>
-          <article class="price-card"><h3>100 Mbps</h3><strong>KSh 8,000 <span>/ month</span></strong><p>Maximum speed for teams and heavy use.</p></article>
+
+        <div class="package-category">
+          <div class="package-category__heading">
+            <span class="eyebrow">Home Internet</span>
+            <h3>Reliable plans for your home</h3>
+          </div>
+
+          <div class="packages-grid">
+            <article class="price-card">
+              <h3>7 Mbps</h3>
+              <strong>KSh 1,000 <span>/ month</span></strong>
+              <p>Good for browsing and lighter daily use.</p>
+            </article>
+
+            <article class="price-card">
+              <h3>10 Mbps</h3>
+              <strong>KSh 1,500 <span>/ month</span></strong>
+              <p>A balanced package for everyday homes.</p>
+            </article>
+
+            <article class="price-card price-card--featured">
+              <div class="popular-tag">Most popular</div>
+              <h3>20 Mbps</h3>
+              <strong>KSh 2,000 <span>/ month</span></strong>
+              <p>Great for busy families and streaming.</p>
+            </article>
+
+            <article class="price-card">
+              <h3>40 Mbps</h3>
+              <strong>KSh 4,000 <span>/ month</span></strong>
+              <p>For heavier home and work demand.</p>
+            </article>
+
+            <article class="price-card">
+              <h3>50 Mbps</h3>
+              <strong>KSh 5,000 <span>/ month</span></strong>
+              <p>Fast connectivity for larger households.</p>
+            </article>
+
+            <article class="price-card">
+              <h3>75 Mbps</h3>
+              <strong>KSh 6,500 <span>/ month</span></strong>
+              <p>Built for work, streaming, and smart homes.</p>
+            </article>
+
+            <article class="price-card">
+              <h3>100 Mbps</h3>
+              <strong>KSh 8,000 <span>/ month</span></strong>
+              <p>Maximum speed for teams and heavy use.</p>
+            </article>
+          </div>
         </div>
+
+        <div class="package-category package-category--business">
+          <div class="package-category__heading">
+            <span class="eyebrow">Business Internet</span>
+            <h3>Business Plans</h3>
+            <p>Scalable connectivity for offices, shops, teams and growing businesses.</p>
+          </div>
+
+          <div class="business-grid">
+            <article class="rate-card">
+              <span>50 Mbps - 100 Mbps</span>
+              <strong>KSh 120</strong>
+              <p>per Mbps</p>
+            </article>
+
+            <article class="rate-card">
+              <span>101 Mbps - 250 Mbps</span>
+              <strong>KSh 110</strong>
+              <p>per Mbps</p>
+            </article>
+
+            <article class="rate-card">
+              <span>251 Mbps - 500 Mbps</span>
+              <strong>KSh 100</strong>
+              <p>per Mbps</p>
+            </article>
+
+            <article class="rate-card">
+              <span>510 Mbps - 1 Gbps</span>
+              <strong>KSh 90</strong>
+              <p>per Mbps</p>
+            </article>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -251,23 +312,126 @@
       </div>
     </section>
 
-    <section class="section" id="coverage">
-      <div class="container split split--map">
-        <div class="split__content">
-          <div class="eyebrow">Coverage map</div>
-          <h2>See where service reaches.</h2>
-          <p>Choose a location and the embedded map updates to that area.</p>
-          <div class="coverage-tags">
-            <span>Kayole</span><span>Umoja</span><span>Dandora</span><span>Kariobangi</span><span>Ruai</span><span>Komarock</span><span>Donholm</span><span>Matopeni</span>
+    <section class="section coverage-section" id="coverage">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <div>
+            <div class="eyebrow">Coverage</div>
+            <h2>Our coverage areas</h2>
           </div>
+          <p>Check your estate, road or nearby landmark before requesting installation.</p>
         </div>
-        <div class="map-card">
-          <label for="coverage-select">Select your location</label>
-          <select id="coverage-select" data-coverage-select>
-            <option value="Kayole, Nairobi, Kenya">Kayole</option>
-          </select>
-          <iframe data-map-frame title="Coverage map" src="https://www.google.com/maps?q=Kayole%2C%20Nairobi%2C%20Kenya&output=embed" loading="lazy"></iframe>
-          <a data-map-link href="https://www.google.com/maps/search/?api=1&query=Kayole%2C%20Nairobi%2C%20Kenya" target="_blank" rel="noopener">Open in Google Maps →</a>
+
+        <div class="coverage-layout">
+          <div class="coverage-information">
+            <div class="coverage-intro">
+              <h3>Areas currently covered</h3>
+              <p>
+                Neema Internet Solution serves homes and businesses across the
+                eastern Nairobi coverage corridor. Select any location to view
+                it on the map.
+              </p>
+            </div>
+
+            <div class="coverage-list" aria-label="Covered locations">
+              <span>Kayole</span><span>Kayole Corner</span><span>Kayole Poster</span><span>Kayole 1</span><span>Patanisho</span><span>Soweto</span><span>Stage 17</span><span>Muthisha</span><span>Jacaranda</span><span>Nasra</span><span>Sosion</span><span>Masimba</span><span>Nyama Villa</span><span>Kwa DO</span><span>Kayole Naivas</span><span>Kangundo Road</span><span>Umoja Kwa Chief</span><span>Umoja Kwa Maji</span><span>First Love Church</span><span>Sabasaba</span><span>Rasta</span><span>Kioi</span><span>Stage 20</span><span>Mugendi</span><span>Kayole Hospital</span><span>Tushauriane</span><span>Matopeni</span><span>Komarock F1</span><span>Komarock F2</span><span>Komarock F3</span><span>K-Mall</span><span>Shujaa Mall</span><span>Donholm</span><span>Umoja 1</span><span>Umoja 2</span><span>Umoja 3</span><span>Dandora Total</span><span>Dandora F1</span><span>Dandora F2</span><span>Dandora F3</span><span>Dandora F4</span><span>Dandora Cinema</span><span>Kwa Mbao</span><span>Kiamaiko</span><span>Dandora Greeni</span><span>Dandora BP</span><span>Dandora Equity</span><span>COCH</span><span>Kariobangi South</span><span>Kariobangi North</span><span>Ruai Town</span><span>Ruai Primary</span><span>Ruai Quickmart</span><span>Ruai Bypass</span><span>Ruai Junction</span><span>Ruai Family</span><span>Ruai Shelter Villa</span><span>Ruai Dune</span><span>Ruai Wel Kim</span><span>Ruai Seventh Sunday</span><span>Ruai Red Gate</span><span>Ruai Mimamu</span>
+            </div>
+
+            <div class="coverage-note">
+              <strong>Can't see your exact location?</strong>
+              <p>
+                Send us your estate, road, building name or Google Maps pin.
+                Our team can confirm availability and arrange a site survey.
+              </p>
+            </div>
+          </div>
+
+          <div class="map-card coverage-map-card">
+            <label for="coverage-select">Select your location</label>
+
+            <select id="coverage-select" data-coverage-select>
+                            <option value="Kayole, Nairobi, Kenya">Kayole</option>
+              <option value="Kayole Corner, Nairobi, Kenya">Kayole Corner</option>
+              <option value="Kayole Poster, Nairobi, Kenya">Kayole Poster</option>
+              <option value="Kayole 1, Nairobi, Kenya">Kayole 1</option>
+              <option value="Patanisho, Nairobi, Kenya">Patanisho</option>
+              <option value="Soweto, Nairobi, Kenya">Soweto</option>
+              <option value="Stage 17, Nairobi, Kenya">Stage 17</option>
+              <option value="Muthisha, Nairobi, Kenya">Muthisha</option>
+              <option value="Jacaranda, Nairobi, Kenya">Jacaranda</option>
+              <option value="Nasra, Nairobi, Kenya">Nasra</option>
+              <option value="Sosion, Nairobi, Kenya">Sosion</option>
+              <option value="Masimba, Nairobi, Kenya">Masimba</option>
+              <option value="Nyama Villa, Nairobi, Kenya">Nyama Villa</option>
+              <option value="Kwa DO, Nairobi, Kenya">Kwa DO</option>
+              <option value="Kayole Naivas, Nairobi, Kenya">Kayole Naivas</option>
+              <option value="Kangundo Road, Nairobi, Kenya">Kangundo Road</option>
+              <option value="Umoja Kwa Chief, Nairobi, Kenya">Umoja Kwa Chief</option>
+              <option value="Umoja Kwa Maji, Nairobi, Kenya">Umoja Kwa Maji</option>
+              <option value="First Love Church, Nairobi, Kenya">First Love Church</option>
+              <option value="Sabasaba, Nairobi, Kenya">Sabasaba</option>
+              <option value="Rasta, Nairobi, Kenya">Rasta</option>
+              <option value="Kioi, Nairobi, Kenya">Kioi</option>
+              <option value="Stage 20, Nairobi, Kenya">Stage 20</option>
+              <option value="Mugendi, Nairobi, Kenya">Mugendi</option>
+              <option value="Kayole Hospital, Nairobi, Kenya">Kayole Hospital</option>
+              <option value="Tushauriane, Nairobi, Kenya">Tushauriane</option>
+              <option value="Matopeni, Nairobi, Kenya">Matopeni</option>
+              <option value="Komarock F1, Nairobi, Kenya">Komarock F1</option>
+              <option value="Komarock F2, Nairobi, Kenya">Komarock F2</option>
+              <option value="Komarock F3, Nairobi, Kenya">Komarock F3</option>
+              <option value="K-Mall, Nairobi, Kenya">K-Mall</option>
+              <option value="Shujaa Mall, Nairobi, Kenya">Shujaa Mall</option>
+              <option value="Donholm, Nairobi, Kenya">Donholm</option>
+              <option value="Umoja 1, Nairobi, Kenya">Umoja 1</option>
+              <option value="Umoja 2, Nairobi, Kenya">Umoja 2</option>
+              <option value="Umoja 3, Nairobi, Kenya">Umoja 3</option>
+              <option value="Dandora Total, Nairobi, Kenya">Dandora Total</option>
+              <option value="Dandora F1, Nairobi, Kenya">Dandora F1</option>
+              <option value="Dandora F2, Nairobi, Kenya">Dandora F2</option>
+              <option value="Dandora F3, Nairobi, Kenya">Dandora F3</option>
+              <option value="Dandora F4, Nairobi, Kenya">Dandora F4</option>
+              <option value="Dandora Cinema, Nairobi, Kenya">Dandora Cinema</option>
+              <option value="Kwa Mbao, Nairobi, Kenya">Kwa Mbao</option>
+              <option value="Kiamaiko, Nairobi, Kenya">Kiamaiko</option>
+              <option value="Dandora Greeni, Nairobi, Kenya">Dandora Greeni</option>
+              <option value="Dandora BP, Nairobi, Kenya">Dandora BP</option>
+              <option value="Dandora Equity, Nairobi, Kenya">Dandora Equity</option>
+              <option value="COCH, Nairobi, Kenya">COCH</option>
+              <option value="Kariobangi South, Nairobi, Kenya">Kariobangi South</option>
+              <option value="Kariobangi North, Nairobi, Kenya">Kariobangi North</option>
+              <option value="Ruai Town, Nairobi, Kenya">Ruai Town</option>
+              <option value="Ruai Primary, Nairobi, Kenya">Ruai Primary</option>
+              <option value="Ruai Quickmart, Nairobi, Kenya">Ruai Quickmart</option>
+              <option value="Ruai Bypass, Nairobi, Kenya">Ruai Bypass</option>
+              <option value="Ruai Junction, Nairobi, Kenya">Ruai Junction</option>
+              <option value="Ruai Family, Nairobi, Kenya">Ruai Family</option>
+              <option value="Ruai Shelter Villa, Nairobi, Kenya">Ruai Shelter Villa</option>
+              <option value="Ruai Dune, Nairobi, Kenya">Ruai Dune</option>
+              <option value="Ruai Wel Kim, Nairobi, Kenya">Ruai Wel Kim</option>
+              <option value="Ruai Seventh Sunday, Nairobi, Kenya">Ruai Seventh Sunday</option>
+              <option value="Ruai Red Gate, Nairobi, Kenya">Ruai Red Gate</option>
+              <option value="Ruai Mimamu, Nairobi, Kenya">Ruai Mimamu</option>
+            </select>
+
+            <iframe
+              data-map-frame
+              title="Neema Internet Solution coverage map"
+              src="https://www.google.com/maps?q=Kayole%2C%20Nairobi%2C%20Kenya&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+
+            <a
+              class="map-card__link"
+              data-map-link
+              href="https://www.google.com/maps/search/?api=1&query=Kayole%2C%20Nairobi%2C%20Kenya"
+              target="_blank"
+              rel="noopener">
+              Open selected location in Google Maps →
+            </a>
+          </div>
         </div>
       </div>
     </section>
