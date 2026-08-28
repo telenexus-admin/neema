@@ -8,16 +8,15 @@ const mapFrame = document.querySelector("[data-map-frame]");
 const mapLink = document.querySelector("[data-map-link]");
 const contactForm = document.querySelector(".contact-form");
 
-/* Transparent header + clickable category bar */
 const enhancementStyle = document.createElement("style");
 enhancementStyle.textContent = `
 .site-header{background:transparent!important;box-shadow:none!important}
 .site-header .nav{background:transparent}
 .site-header .nav-links>a:not(.btn){color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.35)}
 .site-header .nav-toggle span{background:#fff}
-.bar__row a{display:flex;align-items:center;justify-content:center;color:#888;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;transition:color .2s,transform .2s}
-.bar__row a:before{content:"◆";color:var(--red);font-size:8px;margin-right:8px}
-.bar__row a:hover,.bar__row a:focus{color:var(--red);transform:translateY(-1px)}
+.bar__row a,.bar__row span{cursor:pointer;display:flex;align-items:center;justify-content:center;color:#888;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;transition:color .2s,transform .2s}
+.bar__row a:before,.bar__row span:before{content:"◆";color:var(--red);font-size:8px;margin-right:8px}
+.bar__row a:hover,.bar__row a:focus,.bar__row span:hover{color:var(--red);transform:translateY(-1px)}
 #home-packages,#student-package,#community-package,#business-packages,#coverage{scroll-margin-top:115px}
 #home-packages .packages-grid{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto;overflow-y:hidden;gap:18px;padding:8px 4px 18px;scroll-snap-type:x proximity;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
 #home-packages .price-card{flex:0 0 270px;min-width:270px;scroll-snap-align:start;min-height:225px}
@@ -36,7 +35,7 @@ enhancementStyle.textContent = `
 .community-access-card p{color:var(--muted);line-height:1.7;font-size:14px}
 @media(max-width:700px){
  .bar__row{display:flex;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:4px;-webkit-overflow-scrolling:touch}
- .bar__row a{flex:0 0 auto}
+ .bar__row a,.bar__row span{flex:0 0 auto}
  .student-package-card,.community-access-card{grid-template-columns:1fr}
  .community-access-card img{min-height:220px}
  #home-packages .price-card{flex-basis:255px;min-width:255px}
@@ -56,8 +55,30 @@ if (bar) {
   [...bar.querySelectorAll(":scope > span")].forEach((span, i) => {
     const [label, href] = targets[i] || [span.textContent.trim(), "#packages"];
     const link = document.createElement("a");
-    link.href = href; link.textContent = label; link.setAttribute("aria-label", `Go to ${label}`);
+    link.href = href;
+    link.textContent = label;
+    link.setAttribute("aria-label", `Go to ${label}`);
     span.replaceWith(link);
+  });
+
+  // Fallback click handling so the five tabs remain functional even if
+  // another script or browser behavior leaves them as spans.
+  bar.addEventListener("click", (event) => {
+    const item = event.target.closest("a, span");
+    if (!item || !bar.contains(item)) return;
+    const label = item.textContent.trim().toLowerCase();
+    const targetsByLabel = {
+      homes: "#home-packages",
+      businesses: "#business-packages",
+      students: "#student-package",
+      communities: "#community-package",
+      "coverage checks": "#coverage"
+    };
+    const target = targetsByLabel[label];
+    if (!target) return;
+    event.preventDefault();
+    const section = document.querySelector(target);
+    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
 
