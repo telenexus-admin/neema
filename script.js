@@ -10,12 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector(".contact-form");
   const heroVideo = document.querySelector(".hero__video-player");
 
-  // Keep the header transparent without placing any overlay over links.
   const style = document.createElement("style");
   style.textContent = `
-    .site-header{background:transparent!important;box-shadow:none!important}
+    /* Translucent blue navigation header */
+    .site-header{
+      background:rgba(22,91,190,.78)!important;
+      box-shadow:0 8px 28px rgba(9,38,100,.18)!important;
+      backdrop-filter:blur(14px) saturate(145%);
+      -webkit-backdrop-filter:blur(14px) saturate(145%);
+      border-bottom:1px solid rgba(255,255,255,.18);
+    }
+    .site-header:before{
+      background:linear-gradient(90deg,rgba(83,40,201,.92),rgba(20,135,223,.92))!important;
+    }
     .site-header,.site-header *,.bar,.bar *,.nav-links a,.btn,a,button{pointer-events:auto}
     .site-header{z-index:1000}
+    .site-header .brand img{filter:drop-shadow(0 3px 7px rgba(0,0,0,.18))}
+    .site-header .nav-links>a:not(.btn){color:#fff!important;text-shadow:0 1px 5px rgba(0,35,90,.28)}
+    .site-header .nav-links>a:not(.btn):hover{color:#dceeff!important}
+    .site-header .nav-toggle span{background:#fff!important}
+    .site-header .nav-links{background:rgba(14,74,160,.94)}
+    .site-header .nav-links>a{color:#fff}
+
     .bar{position:relative;z-index:10}
     .bar__row a{display:flex;align-items:center;justify-content:center;cursor:pointer;color:#888;text-decoration:none}
     .bar__row a:before{content:"◆";color:var(--red);font-size:8px;margin-right:8px}
@@ -23,14 +39,163 @@ document.addEventListener("DOMContentLoaded", () => {
     #home-packages,#business-packages,#student-package,#community-package,#coverage{scroll-margin-top:115px}
     #home-packages .packages-grid{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto;gap:18px;padding:8px 4px 18px;-webkit-overflow-scrolling:touch}
     #home-packages .price-card{flex:0 0 270px;min-width:270px}
-    @media(max-width:700px){#home-packages .price-card{flex-basis:255px;min-width:255px}.bar__row{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start}.bar__row a{flex:0 0 auto}}
+
+    /* Premium community section */
+    #community-package{
+      position:relative;
+      margin-top:42px;
+      padding:0!important;
+      border:0!important;
+      overflow:visible;
+    }
+    #community-package:before{
+      content:"";
+      position:absolute;
+      width:190px;
+      height:190px;
+      right:-80px;
+      top:-45px;
+      border-radius:50%;
+      background:rgba(20,135,223,.09);
+      pointer-events:none;
+    }
+    #community-package>h3{
+      max-width:760px;
+      margin:10px 0 12px;
+      font-family:"DM Serif Display",Georgia,serif;
+      font-size:clamp(34px,4vw,52px);
+      line-height:1;
+      letter-spacing:-.045em;
+      color:var(--ink);
+    }
+    #community-package>p{
+      max-width:760px;
+      margin:0 0 26px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.75;
+    }
+    #community-package .community-access-card{
+      position:relative;
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+      min-height:440px;
+      margin-top:24px;
+      overflow:hidden;
+      border:0;
+      border-radius:18px;
+      background:linear-gradient(135deg,#111b4b 0%,#173f8d 52%,#1487df 100%);
+      box-shadow:0 24px 60px rgba(21,48,120,.22);
+    }
+    #community-package .community-access-card:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,transparent 30%,rgba(5,20,62,.25) 55%,rgba(5,20,62,.72) 100%);
+      pointer-events:none;
+    }
+    #community-package .community-access-card img{
+      width:100%;
+      height:100%;
+      min-height:440px;
+      object-fit:cover;
+      object-position:center;
+      filter:saturate(.96) contrast(1.02);
+    }
+    #community-package .community-access-card>div{
+      position:relative;
+      z-index:2;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:48px 46px;
+      color:#fff;
+    }
+    #community-package .community-access-card>div:before{
+      content:"COMMUNITY CONNECT";
+      display:inline-flex;
+      align-self:flex-start;
+      align-items:center;
+      min-height:30px;
+      padding:0 12px;
+      margin-bottom:16px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      color:#d9edff;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.16em;
+    }
+    #community-package .community-access-card .eyebrow{color:#91d0ff}
+    #community-package .community-access-card strong{
+      display:block;
+      margin:10px 0 14px;
+      color:#fff;
+      font-family:"DM Serif Display",Georgia,serif;
+      font-size:clamp(30px,3.1vw,45px);
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+    #community-package .community-access-card p{
+      max-width:470px;
+      margin:0 0 22px;
+      color:rgba(255,255,255,.78);
+      font-size:14px;
+      line-height:1.75;
+    }
+    #community-package .community-access-card .btn{
+      align-self:flex-start;
+      background:#fff;
+      color:#173f8d;
+      border-radius:6px;
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+    }
+    #community-package .community-access-card .btn:hover{
+      background:#eaf5ff;
+      color:#102a7a;
+    }
+    #community-package .community-access-card:before{
+      content:"♿  ACCESSIBLE CONNECTIVITY";
+      position:absolute;
+      z-index:3;
+      left:24px;
+      bottom:22px;
+      padding:9px 13px;
+      border:1px solid rgba(255,255,255,.3);
+      border-radius:999px;
+      background:rgba(9,30,80,.62);
+      backdrop-filter:blur(8px);
+      color:#fff;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.1em;
+    }
+
+    @media(max-width:980px){
+      #community-package .community-access-card{grid-template-columns:1fr;min-height:0}
+      #community-package .community-access-card img{height:330px;min-height:330px}
+      #community-package .community-access-card:after{background:linear-gradient(0deg,rgba(5,20,62,.78),transparent 58%)}
+      #community-package .community-access-card>div{padding:34px 30px 40px}
+    }
+    @media(max-width:700px){
+      #home-packages .price-card{flex-basis:255px;min-width:255px}
+      .bar__row{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start}
+      .bar__row a{flex:0 0 auto}
+      #community-package{margin-top:30px}
+      #community-package>h3{font-size:34px}
+      #community-package .community-access-card{border-radius:12px}
+      #community-package .community-access-card img{height:245px;min-height:245px}
+      #community-package .community-access-card>div{padding:28px 22px 34px}
+      #community-package .community-access-card strong{font-size:32px}
+      #community-package .community-access-card:before{left:14px;bottom:auto;top:214px;font-size:8px}
+    }
   `;
   document.head.appendChild(style);
 
   if (packageCategory) packageCategory.id = "home-packages";
   if (business) business.id = "business-packages";
 
-  // Make the category strip real HTML links. No click interception: browser handles anchors natively.
   if (bar) {
     const targets = [
       ["Homes", "#home-packages"],
@@ -55,7 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Restore the complete home package strip.
   const homeGrid = packageCategory?.querySelector(".packages-grid");
   if (homeGrid) {
     const plans = [
@@ -82,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.slice(plans.length).forEach(card => card.remove());
   }
 
-  // Add student and community sections only if they are not already in the page.
   if (!document.getElementById("student-package") && packageCategory) {
     const student = document.createElement("section");
     student.id = "student-package";
